@@ -1,0 +1,116 @@
+@use "global"as g;
+//Read More//
+button {
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+  }
+
+.linkbtn {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: block;
+    padding: 1em 2em 1em 1em;
+    margin-top: auto;
+    width: 175px;
+    font-size: 14px;
+    color: g.$text-light;
+    text-align: center;
+    line-height: 1;
+    background: g.$bg-btn;
+    background: linear-gradient(to right, #5bbee5, #52ddae);
+    text-indent: 0.1em;
+    letter-spacing: 0.1em;
+    border-radius: 1.5em;
+    box-sizing:border-box;
+    cursor:pointer;
+}
+
+.linkbtn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1.5em;
+  margin: auto;
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  border-right: 1px solid g.$text-light;
+  border-top: 1px solid g.$text-light;
+  transform: rotate(45deg);
+  transition: right 0.5s;
+}
+
+.linkbtn:hover:after{
+  right: 1em;
+}
+
+
+
+//SNS ICON//
+
+.iconbtn {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    text-align: center;
+    transition: all 0.3s;
+    & i {
+        font-size: 1.1rem;
+        line-height: 60px;
+    }
+}
+
+.iconinner .iconbtn span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+
+.iconwrapper .iconinner:hover {
+    width: 200px;
+}
+
+.iconwrapper .iconinner:hover .iconbtn > i {
+    color: g.$text-light;
+}
+
+
+.iconwrapper .iconinner:nth-child(1):hover .iconbtn {
+    background-color: g.$icon-facebook;
+
+}
+.iconwrapper .iconinner:nth-child(2):hover .iconbtn {
+    background-color: g.$icon-twitter;
+
+}
+.iconwrapper .iconinner:nth-child(3):hover .iconbtn {
+    background-color: g.$icon-instagram;
+
+}
+
+.iconwrapper .iconinner:nth-child(1):hover span {
+    padding-left: 15px;
+    color: g.$icon-facebook;
+
+}
+.iconwrapper .iconinner:nth-child(2):hover span {
+    padding-left: 15px;
+    color: g.$icon-twitter;
+
+}
+.iconwrapper .iconinner:nth-child(3):hover span {
+    padding-left: 15px;
+    color: g.$icon-instagram;
+}

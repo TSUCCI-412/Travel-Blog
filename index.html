@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+    <meta name="description" content="Travel Blog">
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">
+            <a class="header__link" href="index.html">Travel Blog</a>
+        </h1>
+        <nav class="globalnav">
+            <ul class="globalnav__wrapper">
+                <li class="globalnav__list"><a href="#">NEW</a></li>
+                <li class="globalnav__list"><a href="#">COLUMN</a></li>
+                <li class="globalnav__list"><a href="#">SERIES</a></li>
+                <li class="globalnav__list"><a href="#">Q&A</a></li>
+                <li class="globalnav__list"><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+    <!--3つのピックアップ記事-->
+    <section class="pickup">
+        <article class="pickup__column">
+            <!-- aタグで全体にリンク -->
+            <a href="#">
+                <img src="images/pickup1.jpg" alt="">
+                <h2 class="pickup__column__heading">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
+                <button class="linkbtn" href="#">READ MORE</button>
+            </a>
+        </article>
+        <article class="pickup__column">
+            <a href="#">
+                <img src="images/pickup2.jpg" alt="">
+                <h2 class="pickup__column__heading">タイトルタイトル</h2>
+                <button class="linkbtn" href="#">READ MORE</button>
+            </a>
+        </article>
+        <article class="pickup__column">
+            <a href="#">
+                <img src="images/pickup3.jpg" alt="">
+                <h2 class="pickup__column__heading">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
+                <button class="linkbtn" href="#" >READ MORE</button>
+             </a>
+        </article>
+    </section>
+    <!--3つ記事終わり-->
+    <div class="contents__wrapper">
+        <!--mainとaside-->
+        <main class="contents__wrapper__left">
+            <!--3つのarticleを囲むdiv-->
+            <article class="main__article">
+                <h2 class="main__article__heading">タイトルタイトルタイトルタイトル</h2>
+                <ul class="main__article__category">
+                    <li>
+                        <a href="#">2020/01/01</a>
+                    </li>
+                    <li>
+                        <a href="#">カテゴリ１</a>
+                    </li>
+                </ul>
+
+                <img src="images/main1.jpg" alt="">
+                <p class="main__article__body">
+                    本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。
+                    本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。
+                    本文のテキストが入ります。
+                </p>
+
+                <button class="linkbtn center" href="#">READ MORE</button>
+            </article>
+
+            <article class="main__article">
+                <h2 class="main__article__heading">タイトルタイトルタイトルタイトル</h2>
+                <ul class="main__article__category">
+                    <li>
+                        <time>2020/01/01</time>
+                    </li>
+                    <li>
+                        <a href="#">カテゴリ１</a>
+                    </li>
+                </ul>
+
+                <img src="images/main2.jpg" alt="">
+                <p class="main__article__body">
+                    本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。
+                    本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。
+                    本文のテキストが入ります。
+                </p>
+
+                <button class="linkbtn center" href="#">READ MORE</button>
+            </article>
+
+            <article class="main__article">
+                <h2 class="main__article__heading">タイトルタイトルタイトルタイトル</h2>
+                <ul class="main__article__category">
+                    <li>
+                        <time>2020/01/01</time>
+                    </li>
+                    <li>
+                        <a href="#">カテゴリ１</a>
+                    </li>
+                </ul>
+
+                <img src="images/main3.jpg" alt="">
+                <p class="main__article__body">
+                    本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。
+                    本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。
+                    本文のテキストが入ります。
+                </p>
+
+                <button class="linkbtn center" href="#">READ MORE</button>
+            </article>
+        </main>
+
+        <aside class="contents__wrapper__right">
+
+            <section class="author">
+                <img class="author__picture" src="images/author.jpg" alt="">
+                <h3 class="author__name">Name Name</h3>
+                <p class="author__info">
+                    私のプロフィールを紹介します。私のプロフィールを紹介します。私のプロフィールを紹介します。
+                    私のプロフィールを紹介します。私のプロフィールを紹介します。私のプロフィールを紹介します。
+                    私のプロフィールを紹介します。私のプロフィールを紹介します。
+                </p>
+            </section>
+
+            <section class="ranking">
+                <h3 class="ranking__heading">Ranking</h3>
+
+                <article class="ranking__list">
+                    <a href="#">
+                        <img src="images/ranking1.jpg" alt="">
+                        <h4 class="ranking__list__title">
+                            タイトルテキストテキストテキストテキストテキストテキストテキスト
+                        </h4>
+                    </a>
+                </article>
+                <article class="ranking__list">
+                    <a href="#">
+                        <img src="images/ranking2.jpg" alt="">
+                        <h4 class="ranking__list__title">
+                            タイトルテキストテキストテキストテキストテキストテキストテキスト
+                        </h4>
+                    </a>
+                </article>
+                <article class="ranking__list">
+                    <a href="#">
+                        <img src="images/ranking3.jpg" alt="">
+                        <h4 class="ranking__list__title">
+                            タイトルテキストテキストテキストテキストテキストテキストテキスト
+                        </h4>
+                    </a>
+                </article>
+
+            </section>
+
+
+            <section class="archive">
+                <h3 class="archive__heading">Archive</h3>
+                <ul class="archive__list">
+            
+                    <a class="archive__link" href="#">
+                        <li>
+                            <time datetime="xxxx年xx月xx日(xx)">xxxx年xx月xx日(xx)</time></date>
+                        </li>
+                    </a>
+                    <a class="archive__link" href="#">
+                        <li>
+                            <time datetime="xxxx年xx月xx日(xx)">xxxx年xx月xx日(xx)</time></date>
+                        </li>
+                    </a>
+                    <a class="archive__link" href="#">
+                        <li>
+                            <time datetime="xxxx年xx月xx日(xx)">xxxx年xx月xx日(xx)</time></date>
+                        </li>
+                    </a>
+                    <a class="archive__link" href="#">
+                        <li>
+                            <time datetime="xxxx年xx月xx日(xx)">xxxx年xx月xx日(xx)</time></date>
+                        </li>
+                    </a>
+                    <a class="archive__link" href="#">
+                        <li>
+                            <time datetime="xxxx年xx月xx日(xx)">xxxx年xx月xx日(xx)</time></date>
+                        </li>
+                    </a>
+                </ul>
+
+            </section>
+
+        </aside>
+    </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="flex__wrapper">
+            <section class="footer__inner">
+                <h3 class="footer__inner__heading">About</h3>
+                <p class="footer__inner__text">
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+                <ul class="footer__inner__list">
+                    <li><a href="#" class="arrow">プロフィール詳細</a></li>
+                    <li><a href="#" class="arrow">お仕事の依頼</a></li>
+                    <li><a href="#" class="arrow">お問い合わせ</a></li>
+                </ul>
+            </section>
+
+            <section class="footer__inner">
+                <h3 class="footer__inner__heading">Menu</h3>
+                <ul class="footer__nav">
+                    <li class="footer__nav__item"><a href="#"></a>NEW</li>
+                    <li class="footer__nav__item"><a href="#"></a>CATEGORY</li>
+                    <li class="footer__nav__item"><a href="#"></a>COLUMN</li>
+                    <li class="footer__nav__item"><a href="#"></a>SERIES</li>
+                    <li class="footer__nav__item"><a href="#"></a>Q&A</li>
+                </ul>
+            </section>
+
+            <section class="footer__inner">
+                <div class="iconwrapper">
+                    <div class="iconinner">
+                      <div class="iconbtn"><i class="fab fa-facebook-f"></i></div>
+                      <span>Facebook</span>
+                    </div>
+                    <div class="iconinner">
+                      <div class="iconbtn"><i class="fab fa-twitter"></i></div>
+                      <span>Twitter</span>
+                    </div>
+                    <div class="iconinner">
+                      <div class="iconbtn"><i class="fab fa-instagram"></i></div>
+                      <span>Instagram</span>
+                    </div>
+                  </div>
+               
+           
+            </section>
+        </div>
+
+
+        <p class="copy-right">&copy; Travel Blog</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

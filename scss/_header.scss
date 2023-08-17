@@ -1,0 +1,80 @@
+@use "global" as g;
+
+.header {
+    width: 100%;
+    &__link {
+        display: inline-block; /* 要素をインラインブロックとして表示 */
+        //letter-spacing: 0.1em;
+        color: #82c4be;
+        height: 100%;  //親要素いっぱいに広げる
+        margin: 20px 0;
+    }
+    &__title {
+        text-align: center;
+        //padding: 20px;  
+    }
+}  
+
+//ヘッダーをスクロール後に固定==================================
+.header.sticky {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: g.$bg-nav;
+    display: flex;
+    align-items: center;
+    transition: all 0.6s ease-out;
+}
+.header.sticky .globalnav {
+
+    height: 100%;
+}
+
+.header.sticky .header__title {
+    width: 250px;   
+}
+
+.header.sticky .header__link {
+    display: block;
+    color: g.$text-light;
+    margin: 0;
+}
+.header.sticky .globalnav__wrapper {
+    padding: 0;
+    background-color: transparent;
+}
+//==============================================================
+.globalnav {
+    width: 100%;
+    text-align: center;
+    background-color: g.$bg-nav;
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 150px;
+    }
+    &__list {
+        background-color: g.$bg-nav;
+        padding: 15px 20px;
+        font-size: 1.2rem;
+        transition: all  0.3s ease;
+         & > a {
+         color: g.$text-light; 
+         display: block;
+         height: 100%;
+         letter-spacing: 0.03em;
+        }
+    }
+}
+
+
+.globalnav__list:hover {
+    background-color: g.$space-hover;
+
+}
+
+.globalnav__list:hover a {
+    color:  g.$bg-nav;
+
+}
