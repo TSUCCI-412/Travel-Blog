@@ -1,263 +1,260 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Blog</title>
-    <meta name="description" content="Travel Blog">
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog  写真を通じて世界の魅力を発信するブログ</title>
+    <meta name="description" content="Travel Blog" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-  />
-</head>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="icon" type="images/png" href="images/">
+  </head>
 
-<body>
-    <header class="header">
-        <h1 class="header__title">
-            <a class="header__link" href="index.html">Travel Blog</a>
-        </h1>
-        <nav class="globalnav">
-            <ul class="globalnav__wrapper">
-                <li class="globalnav__list"><a href="#">NEW</a></li>
-                <li class="globalnav__list"><a href="#">COLUMN</a></li>
-                <li class="globalnav__list"><a href="#">SERIES</a></li>
-                <li class="globalnav__list"><a href="#">Q&A</a></li>
-                <li class="globalnav__list"><a href="#">CONTACT</a></li>
-            </ul>
-        </nav>
+  <body>
+    <header class="header" id="header">
+      <h1 class="header__title">
+        <a class="header__link" href="index.html">PhotoBlog</a>
+      </h1>
+      <nav class="globalnav" id="responsibleNav">
+        <ul class="globalnav__wrapper">
+          <li class="globalnav__list"><a href="#">GALLERY</a></li>
+          <li class="globalnav__list"><a href="#">COLUMN</a></li>
+          <!-- <li class="globalnav__list"><a href="#">SERIES</a></li> -->
+          <li class="globalnav__list"><a href="#">PROFILE</a></li>
+          <li class="globalnav__list"><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="navbtn" id="btn-toggle">
+        <img src="./images/camera.svg" alt="suitscase-icon" />
+        <span>Menu</span>
+      </div>
     </header>
+    <div id="spread"></div>
     <div class="container">
-    <!--3つのピックアップ記事-->
-    <section class="pickup">
+      <!--3つのピックアップ記事-->
+      <h2 class="section__title">特集! 日本から4時間以内で行ける海外旅行、楽しみ方から魅力的な写真を撮るためのポイントも紹介!
+      </h2>
+      <section class="pickup__wrapper">
         <article class="pickup__column">
-            <!-- aタグで全体にリンク -->
-            <a href="#">
-                <img src="images/pickup1.jpg" alt="">
-                <h2 class="pickup__column__heading">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-                <button class="linkbtn" href="#">READ MORE</button>
-            </a>
+          <!-- aタグで全体にリンク -->
+          <a href="#">
+            <img src="images/taiwan.jpg" alt="台湾写真" />
+            <h4 class="pickup__column__heading">
+              人気No.1「台湾」 自然を体感したいなら台南へ
+            </h4>
+            <button class="linkbtn" href="#">READ MORE</button>
+          </a>
         </article>
         <article class="pickup__column">
-            <a href="#">
-                <img src="images/pickup2.jpg" alt="">
-                <h2 class="pickup__column__heading">タイトルタイトル</h2>
-                <button class="linkbtn" href="#">READ MORE</button>
-            </a>
+          <a href="#">
+            <img src="images/guam.jpg" alt="グアム写真" />
+            <h4 class="pickup__column__heading">グアムで南国リゾートを堪能</h4>
+            <button class="linkbtn" href="#">READ MORE</button>
+          </a>
         </article>
         <article class="pickup__column">
-            <a href="#">
-                <img src="images/pickup3.jpg" alt="">
-                <h2 class="pickup__column__heading">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h2>
-                <button class="linkbtn" href="#" >READ MORE</button>
-             </a>
+          <a href="#">
+            <img src="images/cheju1.jpg" alt="済州写真" />
+            <h4 class="pickup__column__heading">
+              世界自然遺産「済州島」の魅力
+            </h4>
+            <button class="linkbtn" href="#">READ MORE</button>
+          </a>
         </article>
-    </section>
-    <!--3つ記事終わり-->
-    <div class="contents__wrapper">
+      </section>
+      <!--3つ記事終わり-->
+      <div class="main__wrapper">
         <!--mainとaside-->
-        <main class="contents__wrapper__left">
-            <!--3つのarticleを囲むdiv-->
-            <article class="main__article">
-                <h2 class="main__article__heading">タイトルタイトルタイトルタイトル</h2>
-                <ul class="main__article__category">
-                    <li>
-                        <a href="#">2020/01/01</a>
-                    </li>
-                    <li>
-                        <a href="#">カテゴリ１</a>
-                    </li>
-                </ul>
+        <main class="main__wrapper__left">
+          <h2 class="section__title">日本では出会えない絶景を求めて! 一度は訪れてみたかった国々</h2>
+          <!--3つのarticleを囲むdiv-->
+          <article class="main__article">
+            <h4 class="main__article__heading">
+              アルプスの美しさと鉄道の魅力：スイスでの究極の旅
+            </h4>
+            <ul class="main__article__category">
+              <li>
+                <a href="#">2023/07/30</a>
+              </li>
+              <li>
+                <a href="#">♯自然 #乗り物</a>
+              </li>
+            </ul>
+            <div class="main__article__bg1"></div>
+            <p class="main__article__text">
+              多くの人が一度は訪れたいと思う国「スイス」小さな国とは思えない程、壮大なアルプス山脈、青く透き通る湖、美しい谷、そして風光明媚な村々で溢れています。ハイキングやサイクリングで訪れる人も多いですが、今回は列車の旅をしてきました。標高2000mを超えていく登山列車や……
+            </p>
 
-                <img src="images/main1.jpg" alt="">
-                <p class="main__article__body">
-                    本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。
-                    本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。
-                    本文のテキストが入ります。
-                </p>
+            <button class="linkbtn center" href="#">READ MORE</button>
+          </article>
 
-                <button class="linkbtn center" href="#">READ MORE</button>
-            </article>
+          <article class="main__article">
+            <h4 class="main__article__heading">
+              「ボリビアの宝石」と言われるウユニ塩湖に映し出される不思議な世界
+            </h4>
+            <ul class="main__article__category">
+              <li>
+                <time>2020/02/01</time>
+              </li>
+              <li>
+                <a href="#">#自然</a>
+              </li>
+            </ul>
 
-            <article class="main__article">
-                <h2 class="main__article__heading">タイトルタイトルタイトルタイトル</h2>
-                <ul class="main__article__category">
-                    <li>
-                        <time>2020/01/01</time>
-                    </li>
-                    <li>
-                        <a href="#">カテゴリ１</a>
-                    </li>
-                </ul>
+            <!-- <img src="images/main2.jpg" alt="" /> -->
+            <div class="main__article__bg2"></div>
+            <p class="main__article__text">
+              ボリビアのアルティプラーノ高原に広がるこの塩湖は、乾季には一面の白い塩の鏡のように輝き、雨季には浅い水が湖面として広がり、まさに天空と地上が一体化したような美しい風景を作り出します。訪れたのは雨季にあたる２月、太陽が高く昇ると、湖面は巨大な鏡と化し、空の雲や山々がそのまま水面に映し出されます。
+            </p>
 
-                <img src="images/main2.jpg" alt="">
-                <p class="main__article__body">
-                    本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。
-                    本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。
-                    本文のテキストが入ります。
-                </p>
+            <button class="linkbtn center" href="#">READ MORE</button>
+          </article>
 
-                <button class="linkbtn center" href="#">READ MORE</button>
-            </article>
+          <article class="main__article">
+            <h4 class="main__article__heading">
+              南アフリカのサファリ「野生動物の楽園」
+            </h4>
+            <ul class="main__article__category">
+              <li>
+                <time>2019/09/20</time>
+              </li>
+              <li>
+                <a href="#">#自然 #動物
+                </a>
+              </li>
+            </ul>
 
-            <article class="main__article">
-                <h2 class="main__article__heading">タイトルタイトルタイトルタイトル</h2>
-                <ul class="main__article__category">
-                    <li>
-                        <time>2020/01/01</time>
-                    </li>
-                    <li>
-                        <a href="#">カテゴリ１</a>
-                    </li>
-                </ul>
+            <!-- <img src="images/main3.jpg" alt="" /> -->
+            <div class="main__article__bg3"></div>
+            <p class="main__article__text">
+              到着した翌日の早朝、サファリ車に乗り込むと、太陽が昇る前の静寂が広がっていました。期待を膨らませジャングルの中に進むと、突然、ライオンの遠吠えやゾウのトランペットの音が聞こえ、心臓が益々高鳴りました。サファリガイドの案内のもと、シマウマやチーター、ヒョウなどの野生動物の一瞬の動きを逃さないよう神経をさせました。日が昇ると動物たちは活動を始め……
+            </p>
 
-                <img src="images/main3.jpg" alt="">
-                <p class="main__article__body">
-                    本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。
-                    本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。本文のテキストが入ります。
-                    本文のテキストが入ります。
-                </p>
-
-                <button class="linkbtn center" href="#">READ MORE</button>
-            </article>
+            <button class="linkbtn center" href="#">READ MORE</button>
+          </article>
         </main>
 
-        <aside class="contents__wrapper__right">
+        <aside class="main__wrapper__right">
+          <section class="author">
+            <img class="author__picture" src="images/author.jpg" alt="顏写真" />
+            <p class="author__name">山本 健人</p>
+            <p class="author__info">
+              写真を通じて世界を捉え、記録する旅人。世界中の異なる場所や文化、風景をキャプチャーし、人々にその美しさや魅力を伝えます。出身は広島県、山奥の小さな集落で育ち自然を身近に感じながら過ごす。瀬戸内海の美しさに魅了されたことをきっかけに写真を撮るようになり、現在はカメラマン・旅ブログの運営で活動中。
+            </p>
+          </section>
+        
+          <section class="ranking">
+            <h3 class="section__title"><img src="images/ranking.svg" alt="ranking-icon" width="20px">最もアクセスされた記事TOP3</h3>
 
-            <section class="author">
-                <img class="author__picture" src="images/author.jpg" alt="">
-                <h3 class="author__name">Name Name</h3>
-                <p class="author__info">
-                    私のプロフィールを紹介します。私のプロフィールを紹介します。私のプロフィールを紹介します。
-                    私のプロフィールを紹介します。私のプロフィールを紹介します。私のプロフィールを紹介します。
-                    私のプロフィールを紹介します。私のプロフィールを紹介します。
-                </p>
-            </section>
+            <article class="ranking__list">
+              <p>1位</p>
+              <a href="#">
+                <img src="images/hawaii2.jpg" alt="ハワイ写真" />
+                <h4 class="ranking__list__title"> 
+                  「ハワイ６島」自然の魅力を再発見する島巡り
+                </h4>
+              </a>
+            </article>
+            <article class="ranking__list">
+              <p>2位</p>
+              <a href="">
+                <img src="images/italy2.jpg" alt="イタリア写真" />
+                <h4 class="ranking__list__title">
+                  世界遺産の宝庫「イタリア横断」の旅
+                </h4>
+              </a>
+            </article>
+            <article class="ranking__list">
+              <p>3位</p> 
+              <a href="">
+              <img src="images/spain.jpg" alt="トマト写真" />
+              <h4 class="ranking__list__title">
+                 情熱の国スペインで出会ったカラフルなフェスティバル
+              </h4>
+             </a>
+             </article>
+          </section>
 
-            <section class="ranking">
-                <h3 class="ranking__heading">Ranking</h3>
-
-                <article class="ranking__list">
-                    <a href="#">
-                        <img src="images/ranking1.jpg" alt="">
-                        <h4 class="ranking__list__title">
-                            タイトルテキストテキストテキストテキストテキストテキストテキスト
-                        </h4>
-                    </a>
-                </article>
-                <article class="ranking__list">
-                    <a href="#">
-                        <img src="images/ranking2.jpg" alt="">
-                        <h4 class="ranking__list__title">
-                            タイトルテキストテキストテキストテキストテキストテキストテキスト
-                        </h4>
-                    </a>
-                </article>
-                <article class="ranking__list">
-                    <a href="#">
-                        <img src="images/ranking3.jpg" alt="">
-                        <h4 class="ranking__list__title">
-                            タイトルテキストテキストテキストテキストテキストテキストテキスト
-                        </h4>
-                    </a>
-                </article>
-
-            </section>
-
-
-            <section class="archive">
-                <h3 class="archive__heading">Archive</h3>
-                <ul class="archive__list">
-            
-                    <a class="archive__link" href="#">
-                        <li>
-                            <time datetime="xxxx年xx月xx日(xx)">xxxx年xx月xx日(xx)</time></date>
-                        </li>
-                    </a>
-                    <a class="archive__link" href="#">
-                        <li>
-                            <time datetime="xxxx年xx月xx日(xx)">xxxx年xx月xx日(xx)</time></date>
-                        </li>
-                    </a>
-                    <a class="archive__link" href="#">
-                        <li>
-                            <time datetime="xxxx年xx月xx日(xx)">xxxx年xx月xx日(xx)</time></date>
-                        </li>
-                    </a>
-                    <a class="archive__link" href="#">
-                        <li>
-                            <time datetime="xxxx年xx月xx日(xx)">xxxx年xx月xx日(xx)</time></date>
-                        </li>
-                    </a>
-                    <a class="archive__link" href="#">
-                        <li>
-                            <time datetime="xxxx年xx月xx日(xx)">xxxx年xx月xx日(xx)</time></date>
-                        </li>
-                    </a>
-                </ul>
-
-            </section>
-
+          <section class="archive">
+            <h3 class="archive__heading">写真で巡る旅日記</h3>
+            <ul class="archive__list">
+              <a class="archive__link" href="#">
+                <li>シルクロードの中継地、ウズベキスタンの旅<br>
+                  <time datetime="xxxx年xx月">2019年10月</time>
+                </li>
+              </a>
+              <a class="archive__link" href="#">
+                <li>小さな島国「ナウル公国」<br>
+                  <time datetime="xxxx年xx月">2018年07月</time>
+                </li>
+              </a>
+              <a class="archive__link" href="#">
+                <li>オーロラ鑑賞♯カナダ「イエローナイフ」<br>
+                  <time datetime="xxxx年xx月xx日">2016年02月</time>
+                </li>
+              </a>
+              <a class="archive__link" href="#">
+                <li>東南アジア屈指のビーチリゾート<br>
+                  <time datetime="xxxx年xx月xx日">2017年8月</time>
+                </li>
+              </a>
+              <a class="archive__link" href="#">
+                <li>標高2450mの空中都市「マチュピチュ」<br>
+                  <time datetime="xxxx年xx月xx日(xx)">2016年11月</time>
+                </li>
+              </a>
+            </ul>
+          </section>
         </aside>
+      </div>
+      <!-- 3つの記事より下 -->
     </div>
-    </div>
-
+    <!-- </div> container -->
 
     <footer class="footer">
-        <div class="flex__wrapper">
-            <section class="footer__inner">
-                <h3 class="footer__inner__heading">About</h3>
-                <p class="footer__inner__text">
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                </p>
-                <ul class="footer__inner__list">
-                    <li><a href="#" class="arrow">プロフィール詳細</a></li>
-                    <li><a href="#" class="arrow">お仕事の依頼</a></li>
-                    <li><a href="#" class="arrow">お問い合わせ</a></li>
-                </ul>
-            </section>
+      <div class="flex__wrapper">
+          <div class="footer__inner">
+            <ul class="footer__nav">
+              <li class="footer__nav__item"><a href="#"></a>Top</li>
+              <li class="footer__nav__item"><a href="#"></a>GALLERY</li>
+              <li class="footer__nav__item"><a href="#"></a>COLUMN</li>
+              <!-- <li class="footer__nav__item"><a href="#"></a>SERIES</li> -->
+              <li class="footer__nav__item"><a href="#"></a>CONTACT</li>
+            </ul>
+          </div>
 
-            <section class="footer__inner">
-                <h3 class="footer__inner__heading">Menu</h3>
-                <ul class="footer__nav">
-                    <li class="footer__nav__item"><a href="#"></a>NEW</li>
-                    <li class="footer__nav__item"><a href="#"></a>CATEGORY</li>
-                    <li class="footer__nav__item"><a href="#"></a>COLUMN</li>
-                    <li class="footer__nav__item"><a href="#"></a>SERIES</li>
-                    <li class="footer__nav__item"><a href="#"></a>Q&A</li>
-                </ul>
-            </section>
-
-            <section class="footer__inner">
-                <div class="iconwrapper">
-                    <div class="iconinner">
-                      <div class="iconbtn"><i class="fab fa-facebook-f"></i></div>
-                      <span>Facebook</span>
-                    </div>
-                    <div class="iconinner">
-                      <div class="iconbtn"><i class="fab fa-twitter"></i></div>
-                      <span>Twitter</span>
-                    </div>
-                    <div class="iconinner">
-                      <div class="iconbtn"><i class="fab fa-instagram"></i></div>
-                      <span>Instagram</span>
-                    </div>
-                  </div>
-               
-           
-            </section>
-        </div>
-
-
-        <p class="copy-right">&copy; Travel Blog</p>
+          <div class="footer__inner">
+            <ul class="footer__inner__list">
+              <li><a href="#" class="arrow">活動実績</a></li>
+              <li><a href="#" class="arrow">お仕事の依頼</a></li>
+              <li><a href="#" class="arrow">展覧会・イベント実施</a></li>
+            </ul>
+          </div>
+          <div class="footer__inner">
+              <div class="iconwrapper">
+                <div class="iconinner">
+                  <div class="iconbtn"><i class="fab fa-facebook-f"></i></div>
+                  <span>Facebook</span>
+                </div>
+                <div class="iconinner">
+                  <div class="iconbtn"><i class="fab fa-twitter"></i></div>
+                  <span>Twitter</span>
+                </div>
+                <div class="iconinner">
+                  <div class="iconbtn"><i class="fab fa-instagram"></i></div>
+                  <span>Instagram</span>
+                </div>
+          </div>
+      </div>
     </footer>
-    <script src="js/script.js"></script>
-</body>
+    <p class="copy-right">&copy; PhotoBlog</p>
+     
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
+    <script src="js/script.js"></script>
+  </body>
 </html>
