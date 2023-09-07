@@ -1,39 +1,42 @@
 @use "global" as g;
+@use "mixin" as m;
+
 
 .flex__wrapper {
-         display: flex;
-         justify-content: space-between;
-         padding-top: 50px;
-         padding-bottom: 50px;
-    }
+    text-align: center;
+    @include m.mq(tb) {
+        display: flex;
+
+    }  
+}      
 .footer {
-    padding: 20px 15%;
+    padding: 40px 40px 0px 40px;
     background-color: g.$bg-footer;
-    .copy-right {
-        font-size: 0.75rem;
-        padding: 10px 0;
-        text-align: center;
+    @include m.mq(tb) {
+        padding: 40px 80px 0px 80px;
     }
-       
+    @include m.mq(pc) {
+    padding: 40px 120px 0px 120px;
+    }
+    &__nav {
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
     &__inner {
-        width: 30%;
-        &__heading {
-            margin-bottom: 25px;
+        text-align: left;
+        @include m.mq(tb) {
+            display: flex;
+            justify-content: space-between;
+            width: 33%;
         }
         &__text {
             padding: 0 5px 5px 0px;
-            font-size: 0.875rem;
+            font-size: 16px;
         }
-        &__list {
-           padding: 10px 0;
-           font-size: 0.9rem;
-           & li {
-            margin: 10px 0;
-           }
-           & .arrow {
+        &__list .arrow {
                position:relative;
                display: inline-block;
-               padding-left: 20px;
+               padding: 10px 20px;
                color: g.$text-base;
 
                &::before {
@@ -42,7 +45,7 @@
                height: 0;
                border-style: solid;
                border-width: 6px 0 6px 8px;
-               border-color: transparent g.$text-base;
+               border-color: transparent #333;
                position: absolute;
                top: 50%;
                left: 0;
@@ -52,11 +55,14 @@
     }
 }
 
-}
+
+
 .footer__nav__item {
-    margin-bottom: 20px;
-    font-size: 1.125rem;
+    display: inline;
+    border-bottom: solid 1px #000;
+   
     & a {
+        padding: 5px 20px;
         display: block;
     }
 }
@@ -70,10 +76,19 @@
    color: g.$text-hover;
 }
 
-
+.iconwrapper {
+        padding: 15px;
+        display: flex;
+        justify-content: space-around;
+        @include m.mq(tb) {
+            padding: 0;
+            flex-direction: column;
+            margin: 0;
+        }
+    }
 .iconwrapper .iconinner {
-    height: 60px;
-    width: 60px;
+    height: 30px;
+    width: 30px;
     margin-bottom: 20px;
     background: #ffffff;
     border-radius: 50px;
@@ -81,5 +96,16 @@
     box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
     transition: all 0.3s ease-out; 
     overflow: hidden;
+    @include m.mq(tb) {
+        height: 60px;
+        width: 60px;
 }
 
+}
+
+.copy-right {
+    font-size: 0.8em;
+    padding: 20px;
+    text-align: center;
+    background-color: g.$bg-footer;
+}

@@ -1,4 +1,58 @@
 @use "global"as g;
+@use "mixin" as m;
+
+//sp-btn//
+.navbtn {
+    // position: fixed;
+    position: absolute;
+    z-index: 9999;
+    cursor: pointer;
+    top: 15%;
+    right: 5%;
+    @include m.mq(tb) {
+        display: none;
+    }
+}
+//Menuの文字
+.navbtn > span {
+    font-size: 13px;
+    font-weight: 600;
+    color: g.$text-base;
+    text-overflow: 1px 1px 1px g.$text-base;
+    position: relative;
+}
+.navbtn img {
+    box-shadow: none;
+    width: 30px;
+    height: 30px;
+}
+//メニューが開いている時は✖表示
+.navbtn.active::before, .navbtn.active::after { /* 共通設定 */
+    content: "";
+    position: absolute;
+    margin-left: 5px;
+    display: block;
+    width: 3px; /* 棒の幅（太さ） */
+    height: 30px; /* 棒の高さ */
+    background: #fff;
+    top: 50%;
+    right: 0;
+    z-index: 999;
+   
+  }
+.navbtn.active::before  {
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+.navbtn.active::after {
+    transform: translate(-50%,-50%) rotate(-45deg);
+  }
+
+
+.navbtn.active img, .navbtn.active span {
+    opacity: 0;
+}
+
+
 //Read More//
 button {
     appearance: none;
@@ -15,10 +69,10 @@ button {
     left: 0;
     bottom: 0;
     display: block;
-    padding: 1em 2em 1em 1em;
-    margin-top: auto;
-    width: 175px;
-    font-size: 14px;
+    padding: 10px 25px 10px 10px;
+    margin: 0 auto;
+    width: 145px;
+    font-size: 12px;
     color: g.$text-light;
     text-align: center;
     line-height: 1;
@@ -29,6 +83,15 @@ button {
     border-radius: 1.5em;
     box-sizing:border-box;
     cursor:pointer;
+    @include m.mq(tb) {
+        margin-top: auto;  //ボタンを下部に固定
+    }
+    @include m.mq(pc) {
+        width: 175px;
+        font-size: 14px;
+        padding: 12px 27px 12px 12px;
+        
+    }
 }
 
 .linkbtn:after {
@@ -57,29 +120,43 @@ button {
 
 .iconbtn {
     display: inline-block;
-    height: 60px;
-    width: 60px;
+    height: 30px;
+    width: 30px;
     border-radius: 50px;
     box-sizing: border-box;
-    line-height: 60px;
+    line-height: 30px;
     text-align: center;
     transition: all 0.3s;
-    & i {
-        font-size: 1.1rem;
+    @include m.mq(tb) {
+        height: 60px;
+        width: 60px;
         line-height: 60px;
     }
+    & i {
+        font-size: 17px;
+        line-height: 30px;
+        @include m.mq(tb) {
+            line-height: 60px;
+    }
 }
-
+}
 .iconinner .iconbtn span {
-    font-size: 1.5rem;
     font-weight: 500;
-    line-height: 60px;
+    line-height: 30px;
     margin-left: 10px;
     transition: all 0.3s;
+    @include m.mq(tb) {
+        font-size: 24px;
+        line-height: 60px;
+
+}
 }
 
 .iconwrapper .iconinner:hover {
-    width: 200px;
+    width: 150px;
+    @include m.mq(tb) {
+        width: 200px;
+}
 }
 
 .iconwrapper .iconinner:hover .iconbtn > i {

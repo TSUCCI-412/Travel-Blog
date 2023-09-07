@@ -1,56 +1,119 @@
+@use "mixin" as m;
+@use "global" as g;
+
 //コンテンツ全体幅//
 .container {
-    padding: 20px 15%;
+    margin: 40px;
+    @include m.mq(tb) {
+        margin: 80px;
+    }
+    @include m.mq(pc) {
+        margin: 120px;
+    }
+} 
+.section__title {
+    color: g.$text-base;
+    font-weight: 700;   
+    text-align: center;
+    margin-bottom: 20px;
+    display: inline;
+    background:linear-gradient(transparent 70%, #c9ecf5 0%);
+    animation-name: underline;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.1s;
+    @include m.mq(tb) {
+        font-size: 20px;
+        text-align: left;
+    }
 }
-//ピックアップ記事//
-.pickup {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;  //横にスペース
-    margin-top: 60px;
-    margin-bottom: 60px;
-  
-    &__column {
-        //width: 32%;
-        flex: 1;
+
+
+@keyframes underline {
+    from {
+        width: 0%;
+    } 
+    to {
+        width: 100%;
+    }   
+}
+
+.pickup__wrapper {
+    margin: 30px 0 50px 0;
+    @include m.mq(tb) {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include m.mq(pc) {
+        gap: 20px;
+    }
+}
+.pickup__column {
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        margin-bottom: 20px;
+        @include m.mq(tb) {
+            width: 32%;
+        }
+        @include m.mq(pc) {
+            width: 100%; 
+        }  
         & a {
             display: flex;
             flex-direction: column;
-            //display: block; 
             height: 100%; //全体にリンク
         }
+        & img {
+            height: 250px;
+            width: auto;
+            object-fit: cover;
+            clip-path: inset(0 round 25px 25px 25px 25px);
+            @include m.mq(pc) {
+                height: 300px; 
+            }  
+        }
         &__heading {
-            font-size: 0.9rem;
+            font-size: 17px;
             margin: 10px 0 20px 0;
             padding: 0 1px;
-    }
+            display: inline;
+            @include m.mq(pc) {
+                font-size: 20px
+           }
+        }
 }    
-}
 
+.main__wrapper {
+    width: 100%;
 
-//flex//main.aside//
-.contents__wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 80px;
-    &__left {
-        width: 65%;
-    }
-    &__right {
-        width: 30%;
-        
-    }
+    @include m.mq(tb) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        }
+        &__left {
+            width: 100%;
+            @include m.mq(tb) {
+            margin-right: 5%;
+            width: 65%;
+            }
+        }
+        &__right {
+            width: 100%;
+            @include m.mq(tb) {
+            width: 30%;
+            }
+        }
 }
 //main article//
 .main__article {
     position: relative;
-    margin-bottom: 70px;
+    margin: 40px 0;
     &__heading {
-        font-size: 1.4rem;
-        margin-bottom: 10px;
+        font-size: 19px;
+        margin: 20px 0;
+        @include m.mq(pc) {
+            margin: 40px 0 20px 0;
+        }
     }
     &__category {
         display: flex;
@@ -58,15 +121,83 @@
         justify-content: flex-start;
         margin-bottom: 8px;
         & li {
-            font-size: 0.875rem; 
+            font-size: 15px; 
             margin-right: 20px;   
     }
     }
-    &__body {
+    &__text {
         letter-spacing: 0.05rem;
-        padding: 10px 5px 70px 1px;
         margin: 15px 0;
     }
 }
 
+.main__article:nth-child(2),
+.main__article:nth-child(3) {
+    @include m.mq(pc) {
+    margin-bottom: 64px;
+}
 
+}
+
+ .main__article__bg1,
+ .main__article__bg2,
+ .main__article__bg3 {
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    @include m.mq(tb) {
+        height: 300px;
+    }
+    @include m.mq(pc) {
+        height: 400px;
+    }
+}
+.main__article__bg1 {
+    animation-name: change-img1;
+}
+.main__article__bg2 {
+    animation-name: change-img2;
+}
+.main__article__bg3 {
+    animation-name: change-img3;
+}
+
+
+@keyframes change-img1 {
+    0%,100% {
+        background-image: url(../images/swiss1.jpg);
+    }
+    35% {
+        background-image: url(../images/swiss3.jpg);
+    }
+    70%{
+        background-image: url(../images/swiss2.jpg);
+    }
+ }
+
+@keyframes change-img2 {
+    0%,100% {
+        background-image: url(../images/uyuni1.jpg);
+    }
+    35%{
+        background-image: url(../images/uyuni2.jpg);
+    }
+    70%{
+        background-image: url(../images/uyuni3.jpg);
+    }
+ }
+@keyframes change-img3 {
+    0%,100% {
+        background-image: url(../images/africa1.jpg);
+    }
+    35%{
+        background-image: url(../images/africa3.jpg);
+    }
+    70%{
+        background-image: url(../images/africa4.jpg);
+    }
+}

@@ -1,0 +1,28 @@
+
+
+$breakpoints: (
+  'tb': 'screen and (min-width: 600px)',
+  'pc': 'screen and (min-width: 1025px)',
+);
+// mixin名を「mq」mixinに引数「$bp」を用意,map-get($マップの名前, 取得したいキー)
+// @include mixinの名前(引数) {
+
+// }
+//  使用例　@include mq(tab) {
+
+//
+  
+  
+  @mixin mq($breakpoint:tb) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+
+  @mixin mq($breakpoint:pc) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+  
+  

@@ -1,4 +1,6 @@
 @use "global" as g;
+@use "mixin" as m;
+
 
 .author {
     padding-top: 50px;
@@ -12,47 +14,77 @@
         
     }
     &__name {
-        color: g.$text-point;
-        font-size: 1.125rem;
+        color: g.$text-base;
+        font-size: 18px;
         font-weight: bold;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
     }
     &__info {
-        font-size: 0.75rem;
+        font-size: 16px;
         text-align: left;
+        @include m.mq(tb) {
+            font-size: 14px;
+        }
+        @include m.mq(pc) {
+            font-size: 16px;
     }
-    
+} 
+}
+.author__name::after {
+    content: "Kento Yamamoto";
+    display: block;
+    font-size: 14px;
+    font-style: oblique;
 }
 .ranking {
     text-align: center;
     margin-bottom: 180px;
     
     &__heading {
-        font-size: 1.125rem;
+        font-size: 20px;
         font-weight: bold;
-        margin-bottom: 25px;
+        margin-bottom: 24px;
     }    
     &__list {
-        margin-bottom: 30px;
+        margin: 30px 0;
+        & p {
+            font-weight: bold;
+            color: g.$text-point;
+            margin-bottom: 24px;
+        }
+        & a:hover {
+            color: g.$text-hover
+        }
         &__title {
-            font-size: 0.8rem;
-            font-weight: normal;
+            font-size: 17px;
             text-align: left;
             margin-top: 5px;
         }
     
     }
 }
+.ranking .section__title {
+    @include m.mq(pc) {
+        font-size: 20px;
+    }
+    & img {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    box-shadow: none;
+}
+}
 
 .archive {
-    margin-bottom: 60px;
+    margin-bottom: 64px;
     text-align: center;
     &__heading {
-        font-size: 1.125rem;
-        font-weight: bold;
-        margin-bottom: 25px;
+        font-weight: 500;
+        margin-bottom: 24px;
     }    
     &__link {
+            font-size: 16px;
+            font-weight: 500;
             display:block;
             padding: 20px;
             border-top: solid 1px g.$text-base;
@@ -65,6 +97,6 @@
     
     }
 
-    .archive__link:hover time {
+    .archive__link li:hover  {
         color: g.$bg-btn;
     }
