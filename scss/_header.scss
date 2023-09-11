@@ -55,7 +55,7 @@
 
 .globalnav {
     width: 50%;
-    background-color: #003f5c;;
+    background-color: g.$bg-nav;
     position: fixed;
     top: 0;  
     right: -300px;
@@ -108,11 +108,13 @@
 
 
 .globalnav__list:hover {
-    background-color: g.$space-hover;
+    background-color: #f6eaead9;
+    transition: 500ms ease;
 
 }
 
 .globalnav__list:hover a {
+    transition: 500ms ease;
     color:  g.$bg-nav;
 
 }

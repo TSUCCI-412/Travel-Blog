@@ -70,10 +70,12 @@
 .footer__inner__list li:hover a {
     display: block;
     color: g.$text-hover;
+    transition: 500ms ease;
 }
 
 .footer__nav__item:hover {
    color: g.$text-hover;
+   transition: 500ms ease;
 }
 
 .iconwrapper {

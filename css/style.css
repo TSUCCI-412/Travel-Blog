@@ -168,7 +168,7 @@ a {
   }
   .header.sticky .header__link {
     display: block;
-    color: #ffffff;
+    color: #f6eaea;
     margin: 0;
   }
   .header.sticky .globalnav__wrapper {
@@ -229,7 +229,7 @@ a {
   }
 }
 .globalnav__list > a {
-  color: #ffffff;
+  color: #f6eaea;
   font-weight: 500;
   display: block;
   height: 100%;
@@ -237,10 +237,12 @@ a {
 }
 
 .globalnav__list:hover {
-  background-color: rgba(229, 229, 240, 0.7450980392);
+  background-color: rgba(246, 234, 234, 0.8509803922);
+  transition: 500ms ease;
 }
 
 .globalnav__list:hover a {
+  transition: 500ms ease;
   color: #003f5c;
 }
 
@@ -529,11 +531,12 @@ a {
 }
 .ranking__list p {
   font-weight: bold;
-  color: #003f5c;
+  color: #333;
   margin-bottom: 24px;
 }
 .ranking__list a:hover {
-  color: #5bbee5;
+  color: rgba(25, 188, 203, 0.8431372549);
+  transition: 300ms ease;
 }
 .ranking__list__title {
   font-size: 17px;
@@ -573,7 +576,8 @@ a {
 }
 
 .archive__link li:hover {
-  color: #5bbee5;
+  color: rgba(25, 188, 203, 0.8431372549);
+  transition: 300ms ease;
 }
 
 .flex__wrapper {
@@ -647,11 +651,13 @@ a {
 
 .footer__inner__list li:hover a {
   display: block;
-  color: #5bbee5;
+  color: rgba(25, 188, 203, 0.8431372549);
+  transition: 500ms ease;
 }
 
 .footer__nav__item:hover {
-  color: #5bbee5;
+  color: rgba(25, 188, 203, 0.8431372549);
+  transition: 500ms ease;
 }
 
 .iconwrapper {
@@ -763,7 +769,7 @@ button {
   margin: 0 auto;
   width: 145px;
   font-size: 12px;
-  color: #ffffff;
+  color: #f6eaea;
   text-align: center;
   line-height: 1;
   background: #5bbee5;
@@ -797,8 +803,8 @@ button {
   display: inline-block;
   width: 0.5em;
   height: 0.5em;
-  border-right: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
+  border-right: 1px solid #f6eaea;
+  border-top: 1px solid #f6eaea;
   transform: rotate(45deg);
   transition: right 0.5s;
 }
@@ -857,7 +863,7 @@ button {
 }
 
 .iconwrapper .iconinner:hover .iconbtn > i {
-  color: #ffffff;
+  color: #f6eaea;
 }
 
 .iconwrapper .iconinner:nth-child(1):hover .iconbtn {
